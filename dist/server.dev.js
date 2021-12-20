@@ -27,7 +27,10 @@ app.get("/", function (req, res) {
 
 var userRoutes = require("./routes/users");
 
+var subsRoutes = require("./routes/subscribers");
+
 app.use("/users", userRoutes);
+app.use("/subscribe", subsRoutes);
 app.post("/test-login", function _callee(req, res, next) {
   var _req$body, email, password, user, isMatch;
 

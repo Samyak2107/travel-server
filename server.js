@@ -23,7 +23,10 @@ app.get("/", function (req, res) {
 });
 
 const userRoutes = require("./routes/users");
+const subsRoutes = require("./routes/subscribers");
+
 app.use("/users", userRoutes);
+app.use("/subscribe", subsRoutes);
 
 app.post("/test-login", async (req, res, next) => {
   const { email, password } = req.body;
