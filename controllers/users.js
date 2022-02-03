@@ -126,7 +126,7 @@ const handleNewUser = async (req, res, next) => {
 const handleLogin = async (req, res, next) => {
   const { email, password } = req.body;
   if (!email || !password) {
-    res.status(400).json({ message: "Please provide all fields" });
+    res.status(400).json({ message: "Please provide all fields !" });
   } else {
     const user = await User.findOne({ email: email });
     if (!user) {

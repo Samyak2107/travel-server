@@ -207,7 +207,7 @@ var handleLogin = function handleLogin(req, res, next) {
           }
 
           res.status(400).json({
-            message: "Please provide all fields"
+            message: "Please provide all fields !"
           });
           _context2.next = 26;
           break;
