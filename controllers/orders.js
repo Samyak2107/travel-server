@@ -9,7 +9,7 @@ const createNewOrder = async (req, res) => {
       key_secret: process.env.RAZORPAY_SECRET,
     });
     const options = {
-      amount: req.body.amount,
+      amount: req.body.amount * 100,
       currency: "INR",
       reciept: req.body.receipt,
       payment_capture: 1,
