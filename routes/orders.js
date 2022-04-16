@@ -12,6 +12,7 @@ app.post("/pay-order", async (req, res) => {
 });
 
 app.get("/list-orders", async (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
   orderController.fetchAllOrders(req, res);
 });
 
