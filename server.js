@@ -24,9 +24,11 @@ app.get("/", function (req, res) {
 
 const userRoutes = require("./routes/users");
 const subsRoutes = require("./routes/subscribers");
+const orderRoutes = require("./routes/orders");
 
 app.use("/users", userRoutes);
 app.use("/subscribe", subsRoutes);
+app.use("/orders", orderRoutes);
 
 app.post("/test-login", async (req, res, next) => {
   const { email, password } = req.body;
