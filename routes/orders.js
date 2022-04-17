@@ -3,15 +3,15 @@ const router = express.Router();
 
 const orderController = require("../controllers/orders");
 
-router.post("/create-order", async (req, res) => {
+router.post("/create-order", (req, res) => {
   orderController.createNewOrder(req, res);
 });
 
-router.post("/pay-order", async (req, res) => {
+router.post("/pay-order", (req, res) => {
   orderController.storePaidOrder(req, res);
 });
 
-router.get("/list-orders", async (req, res) => {
+router.get("/list-orders", (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
   orderController.fetchAllOrders(req, res);
 });
