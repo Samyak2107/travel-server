@@ -9,8 +9,8 @@ const createNewOrder = async (req, res) => {
     //   key_secret: process.env.RAZORPAY_SECRET,
     // });
     var instance = new Razorpay({
-      key_id: "rzp_test_rdCgzPbEFKxWCO",
-      key_secret: "4T2sR2QYpJkMhYbs0FvW3Gqr",
+      key_id: process.env.RAZORPAY_KEY_ID,
+      key_secret: process.env.RAZORPAY_SECRET,
     });
     const options = {
       amount: req.body.amount * 100,
