@@ -51,11 +51,11 @@ const orderRoutes = require("./routes/orders");
 const contactRoutes = require("./routes/contacts");
 const brandenquiryRoutes = require("./routes/brandenquirys");
 
-app.use("/users", userRoutes);
-app.use("/subscribe", subsRoutes);
-app.use("/orders", orderRoutes);
-app.use("/contacts", contactRoutes);
-app.use("/brandenquirys", brandenquiryRoutes);
+app.use("/users", userRoutes, cors());
+app.use("/subscribe", subsRoutes, cors());
+app.use("/orders", orderRoutes, cors());
+app.use("/contacts", contactRoutes, cors());
+app.use("/brandenquirys", brandenquiryRoutes, cors());
 
 app.post("/test-login", async (req, res, next) => {
   const { email, password } = req.body;
